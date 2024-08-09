@@ -6,7 +6,7 @@ const MovieSearch = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
 
-  const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza esto con tu API key de OMDb API
+  const API_KEY = 'baf4c27c'; // Reemplaza esto con tu API key de OMDb API
 
   const searchMovies = async () => {
     if (query.trim() === '') {
@@ -16,7 +16,7 @@ const MovieSearch = () => {
     }
 
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${"baf4c27c"}`);
+      const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
       const data = await response.json();
 
       if (data.Response === 'False') {
