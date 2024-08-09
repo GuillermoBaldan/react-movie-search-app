@@ -16,7 +16,7 @@ const MovieSearch = () => {
     }
 
     try {
-      const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
+      const response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`);
       const data = await response.json();
 
       if (data.Response === 'False') {
